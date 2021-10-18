@@ -1,3 +1,8 @@
+//Button to start the quiz
+var gameBtn = document.querySelector("#quiz");
+gameBtn.addEventListener("click", InsertFunctionNameHere);
+
+//Timer Functionality
 var timerEl = document.getElementById("timer");
 
 function countdown() {
