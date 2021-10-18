@@ -47,3 +47,8 @@ header {
 .btn2:active {
   background-color: #301934;
 }
+
+.gameUI {
+  position: relative;
+  text-align: center;
+}

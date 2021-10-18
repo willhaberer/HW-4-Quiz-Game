@@ -3,6 +3,9 @@ var gameBtn = document.querySelector("#quiz");
 gameBtn.addEventListener("click", quizGame);
 
 //main function to run the game
+var qs = document.querySelector("#question");
+qs.textContent = "Question text here";
+console.log(qs);
 function quizGame() {
   countdown();
 }
