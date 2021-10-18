@@ -1,6 +1,6 @@
 //Button to start the quiz
 var gameBtn = document.querySelector("#quiz");
-gameBtn.addEventListener("click", InsertFunctionNameHere);
+gameBtn.addEventListener("click", countdown);
 
 //Timer Functionality
 var timerEl = document.getElementById("timer");
@@ -17,5 +17,3 @@ function countdown() {
     }
   }, 1000);
 }
-
-countdown();

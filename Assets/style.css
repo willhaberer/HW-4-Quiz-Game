@@ -11,7 +11,12 @@ header {
   color: white;
 }
 
-.btn {
+.container {
+  position: relative;
+}
+
+.btn1,
+.btn2 {
   border: none;
   background-color: #9370db;
   border-radius: 25px;
@@ -27,10 +32,12 @@ header {
   cursor: pointer;
 }
 
-.btn:hover {
+.btn1:hover,
+.btn2:hover {
   background-color: #c8a2c8;
 }
 
-.btn:active {
+.btn1:active,
+.btn2:active {
   background-color: #301934;
 }
