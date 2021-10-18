@@ -1,7 +1,11 @@
 //Button to start the quiz
 var gameBtn = document.querySelector("#quiz");
-gameBtn.addEventListener("click", countdown);
+gameBtn.addEventListener("click", quizGame);
 
+//main function to run the game
+function quizGame() {
+  countdown();
+}
 //Timer Functionality
 var timerEl = document.getElementById("timer");
 
