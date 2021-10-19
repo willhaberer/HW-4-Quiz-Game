@@ -39,12 +39,14 @@ header {
 }
 
 .btn1:hover,
-.btn2:hover {
+.btn2:hover,
+.optionsButton:hover {
   background-color: #c8a2c8;
 }
 
 .btn1:active,
-.btn2:active {
+.btn2:active,
+.optionsButton:active {
   background-color: #301934;
 }
 
@@ -56,6 +58,22 @@ header {
 #timer {
   border: none;
   background-color: white;
+  border-radius: 25px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 6px 0px rgba(0, 0, 0, 0.2) 0px 1px 1px
+    0px;
+  color: hsl(0, 0%, 100%);
+  display: inline-block;
+  font-size: 22px;
+  line-height: 22px;
+  margin: 16px 16px 16px 20px;
+  padding: 14px 34px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.optionsButton {
+  border: none;
+  background-color: #9370db;
   border-radius: 25px;
   box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 6px 0px rgba(0, 0, 0, 0.2) 0px 1px 1px
     0px;
