@@ -10,6 +10,8 @@ To make edits on your own machine you can clone the git repository with this lin
 
 Open the application at https://willhaberer.github.io/HW-4-Quiz-Game/ and click on the Take Quiz button to begin.
 
+<img src=./assets/screenshot.png>
+
 ## Contributing
 
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
