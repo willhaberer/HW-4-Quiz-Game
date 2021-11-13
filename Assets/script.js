@@ -6,6 +6,7 @@ var opt2Btn = document.querySelector("#option2");
 var opt3Btn = document.querySelector("#option3");
 var opt4Btn = document.querySelector("#option4");
 var status = document.getElementById("#status");
+var gameUI = document.querySelector(".gameUI");
 
 //Global Vars
 var currentScore = 0;
@@ -72,11 +73,17 @@ var quizQuestions = [questionOne, questionTwo, questionThree, questionFour];
 var startBtn = document.querySelector("#quiz");
 startBtn.addEventListener("click", quizGame);
 
+//main function to run the game
+function quizGame() {
+  gameUI.setAttribute("style", "visibility:visible");
+  startTimer();
+}
+
 function startTimer() {
   timerEl.setAttribute("style", "background-color: #9370db");
   var timeInterval = setInterval(function () {
     if (secondsLeft > 0) {
-      timerEl.textContent = secondsLeft + " left in the quiz";
+      timerEl.textContent = secondsLeft + " seconds left in the quiz";
       secondsLeft--;
     } else if (quizRunning === false) {
       timerEl.textContent = "Time has expired?";
@@ -84,6 +91,3 @@ function startTimer() {
     }
   }, 1000);
 }
-
-//main function to run the game
-function quizGame() {}
