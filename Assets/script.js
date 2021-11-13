@@ -6,6 +6,7 @@ var opt2Btn = document.querySelector("#option2");
 var opt3Btn = document.querySelector("#option3");
 var opt4Btn = document.querySelector("#option4");
 var gameUI = document.querySelector(".gameUI");
+
 var startBtn = document.querySelector("#quiz");
 var highScoreBtn = document.querySelector("#high-scores");
 
@@ -27,16 +28,6 @@ var questionOne = {
   a3: "document.querySelector('#button')",
   a4: "button.querySelector('#document')",
   correctAnswer: "document.querySelector('#button')",
-};
-
-var questionTwo = {
-  question:
-    "What type of variable is declared by the following code: var shoppingList= []",
-  a1: "Array",
-  a2: "Integer",
-  a3: "Object",
-  a4: "shoppingList",
-  correctAnswer: "Array",
 };
 
 var questionTwo = {
@@ -72,12 +63,14 @@ var quizQuestions = [questionOne, questionTwo, questionThree, questionFour];
 
 //Button to start the quiz
 var startBtn = document.querySelector("#quiz");
-startBtn.addEventListener("click", quizGame);
+startBtn.addEventListener("click", function () {
+  quizGame();
+  startTimer();
+});
 
 //main function to run the game
 function quizGame() {
   gameUI.setAttribute("style", "visibility:visible");
-  startTimer();
   setQuestion(qIterator);
   startBtn.disabled = true;
   highScoreBtn.disabled = true;
@@ -89,7 +82,7 @@ function startTimer() {
     if (secondsLeft > 0) {
       timerEl.textContent = secondsLeft + " seconds left";
       secondsLeft--;
-    } else if (secondsLeft === 0) {
+    } else if (secondsLeft === 0 && qIterator < quizQuestions.length) {
       timerEl.textContent = "Time has expired?";
       timerEl.setAttribute("style", "background-color:#301934");
     }
@@ -109,5 +102,18 @@ function userAnswerCheck() {
   gameUI.addEventListener("click", function (event) {
     var userAnswer = event.target;
     console.log(userAnswer.textContent);
+    qIterator++;
+    console.log(secondsLeft);
+    if (qIterator < quizQuestions.length) {
+      quizGame();
+    } else {
+      qs.textContent = "Quiz is Over";
+      opt1Btn.setAttribute("style", "visibility:hidden");
+      opt2Btn.setAttribute("style", "visibility:hidden");
+      opt3Btn.setAttribute("style", "visibility:hidden");
+      opt4Btn.setAttribute("style", "visibility:hidden");
+      timerEl.setAttribute("style", "visibility:hidden");
+      timerEl.setAttribute("style", "background-color:#FFFFFF");
+    }
   });
 }
