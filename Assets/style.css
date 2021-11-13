@@ -53,6 +53,7 @@ header {
 .gameUI {
   position: relative;
   text-align: center;
+  visibility: hidden;
 }
 
 #timer {
