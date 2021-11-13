@@ -5,7 +5,6 @@ var opt1Btn = document.querySelector("#option1");
 var opt2Btn = document.querySelector("#option2");
 var opt3Btn = document.querySelector("#option3");
 var opt4Btn = document.querySelector("#option4");
-var status = document.getElementById("#status");
 var gameUI = document.querySelector(".gameUI");
 var startBtn = document.querySelector("#quiz");
 var highScoreBtn = document.querySelector("#high-scores");
@@ -98,5 +97,9 @@ function startTimer() {
 }
 
 function setQuestion(iterator) {
-  console.log(iterator);
+  qs.textContent = quizQuestions[iterator].question;
+  opt1Btn.textContent = quizQuestions[iterator].a1;
+  opt2Btn.textContent = quizQuestions[iterator].a2;
+  opt3Btn.textContent = quizQuestions[iterator].a3;
+  opt4Btn.textContent = quizQuestions[iterator].a4;
 }
