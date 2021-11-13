@@ -7,6 +7,8 @@ var opt3Btn = document.querySelector("#option3");
 var opt4Btn = document.querySelector("#option4");
 var status = document.getElementById("#status");
 var gameUI = document.querySelector(".gameUI");
+var startBtn = document.querySelector("#quiz");
+var highScoreBtn = document.querySelector("#high-scores");
 
 //Global Vars
 var currentScore = 0;
@@ -78,6 +80,8 @@ function quizGame() {
   gameUI.setAttribute("style", "visibility:visible");
   startTimer();
   setQuestion(qIterator);
+  startBtn.disabled = true;
+  highScoreBtn.disabled = true;
 }
 
 function startTimer() {
