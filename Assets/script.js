@@ -87,7 +87,7 @@ function startTimer() {
   timerEl.setAttribute("style", "background-color: #9370db");
   var timeInterval = setInterval(function () {
     if (secondsLeft > 0) {
-      timerEl.textContent = secondsLeft + " seconds left in the quiz";
+      timerEl.textContent = secondsLeft + " seconds left";
       secondsLeft--;
     } else if (secondsLeft === 0) {
       timerEl.textContent = "Time has expired?";
@@ -102,4 +102,12 @@ function setQuestion(iterator) {
   opt2Btn.textContent = quizQuestions[iterator].a2;
   opt3Btn.textContent = quizQuestions[iterator].a3;
   opt4Btn.textContent = quizQuestions[iterator].a4;
+  userAnswerCheck();
+}
+
+function userAnswerCheck() {
+  gameUI.addEventListener("click", function (event) {
+    var userAnswer = event.target;
+    console.log(userAnswer.textContent);
+  });
 }
