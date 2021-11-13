@@ -10,6 +10,7 @@ var status = document.getElementById("#status");
 //Global Vars
 var currentScore = 0;
 var secondsLeft = 100;
+var qIterator = 0;
 var scoreboard = {
   Name: [],
   scores: [],
@@ -64,6 +65,8 @@ var questionFour = {
   a4: "Hexadecimal",
   correctAnswer: "Boolean",
 };
+
+var quizQuestions = [questionOne, questionTwo, questionThree, questionFour];
 
 //Button to start the quiz
 var startBtn = document.querySelector("#quiz");
