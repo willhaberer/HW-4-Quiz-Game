@@ -77,6 +77,7 @@ startBtn.addEventListener("click", quizGame);
 function quizGame() {
   gameUI.setAttribute("style", "visibility:visible");
   startTimer();
+  setQuestion(qIterator);
 }
 
 function startTimer() {
@@ -85,9 +86,13 @@ function startTimer() {
     if (secondsLeft > 0) {
       timerEl.textContent = secondsLeft + " seconds left in the quiz";
       secondsLeft--;
-    } else if (quizRunning === false) {
+    } else if (secondsLeft === 0) {
       timerEl.textContent = "Time has expired?";
       timerEl.setAttribute("style", "background-color:#301934");
     }
   }, 1000);
+}
+
+function setQuestion(iterator) {
+  console.log(iterator);
 }
